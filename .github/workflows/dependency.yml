@@ -16,7 +16,7 @@ jobs:
         run: echo Hello my name is $Name!
       - name: Run a multi-line script
         run:
-          echo this is secrets ${{secete.MY_NAME}},
+          echo this is secrets ${{secrets.MY_NAME}},
           echo this is for practice purpose only.
           echo this job is completed now.
           
@@ -28,7 +28,7 @@ job_2:
       run: echo Hello my name is $Name!
     - name: Run a multi-line script
       run:
-        echo this is secrets ${{secete.MY_NAME}},
+        echo this is secrets ${{secrets.MY_NAME}},
         echo this is for practice purpose only.
         echo this job is completed now.
 
@@ -41,7 +41,7 @@ job_3:
       run: echo Hello my name is $Name!
     - name: Run a multi-line script
       run:
-        echo ts is secrets ${{secete.MY_NAME}} 3,
+        echo ts is secrets ${{secrets.MY_NAME}} 3,
         echo this is for practice purpose only.
         echo this job is completed now.
 
@@ -54,6 +54,6 @@ job_4:
       run: echo Hello my name is $Name!
     - name: Run a multi-line script
       run:
-        echo ts is secrets ${{secete.MY_NAME}} 4,
+        echo ts is secrets ${{secrets.MY_NAME}} 4,
         echo this is for practice purpose only.
         echo this job is completed now.
