@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Run a one-line script
-        run: echo Hello my name is $Name!
+        run: echo Hello my name is $Name
       - name: Run a multi-line script
         run:
           echo this is secrets ${{secrets.MY_NAME}},
@@ -25,7 +25,7 @@ job_2:
   steps:
     - uses: actions/checkout@v3
     - name: Run a one-line script
-      run: echo Hello my name is $Name!
+      run: echo Hello my name is $Name
     - name: Run a multi-line script
       run:
         echo this is secrets ${{secrets.MY_NAME}},
@@ -34,7 +34,7 @@ job_2:
 
 job_3:
   runs-on: ubuntu-latest
-  needs: [job_1]
+  needs: job_1
   steps:
     - uses: actions/checkout@v3
     - name: Run a one-line script
