@@ -20,39 +20,39 @@ jobs:
           echo this is for practice purpose only.
           echo this job is completed now.
           
-job_2:
-  runs-on: ubuntu-latest
-  steps:
-    - uses: actions/checkout@v3
-    - name: Run a one-line script
-      run: echo Hello my name is $Name
-    - name: Run a multi-line script
-      run:
-        echo this is for practice purpose only.
-        echo this job is completed now.
+  job_2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run a one-line script
+        run: echo Hello my name is $Name
+      - name: Run a multi-line script
+        run:
+          echo this is for practice purpose only.
+          echo this job is completed now.
 
-# job_3:
-#   runs-on: ubuntu-latest
-#   needs: job_1
-#   steps:
-#     - uses: actions/checkout@v3
-#     - name: Run a one-line script
-#       run: echo Hello my name is $Name!
-#     - name: Run a multi-line script
-#       run:
-#         echo ts is secrets ${{secrets.MY_NAME}} 3,
-#         echo this is for practice purpose only.
-#         echo this job is completed now.
+  job_3:
+    runs-on: ubuntu-latest
+    needs: job_1
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run a one-line script
+        run: echo Hello my name is $Name!
+      - name: Run a multi-line script
+        run:
+          echo ts is secrets ${{secrets.MY_NAME}} 3,
+          echo this is for practice purpose only.
+          echo this job is completed now.
 
-# job_4:
-#   runs-on: ubuntu-latest
-#   if: ${{ always() }}
-#   steps:
-#     - uses: actions/checkout@v3
-#     - name: Run a one-line script
-#       run: echo Hello my name is $Name!
-#     - name: Run a multi-line script
-#       run:
-#         echo ts is secrets ${{secrets.MY_NAME}} 4,
-#         echo this is for practice purpose only.
-#         echo this job is completed now.
+  job_4:
+    runs-on: ubuntu-latest
+    if: ${{ always() }}
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run a one-line script
+        run: echo Hello my name is $Name!
+      - name: Run a multi-line script
+        run:
+          echo ts is secrets ${{secrets.MY_NAME}} 4,
+          echo this is for practice purpose only.
+          echo this job is completed now.
